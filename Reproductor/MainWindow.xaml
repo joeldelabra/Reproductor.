@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Reproductor"
         mc:Ignorable="d"
-        Title="R E P R O D U C T O R" Height="222" Width="593.903">
+        Title="R E P R O D U C T O R" Height="267.723" Width="552.104">
     <Grid Margin="0,0,2,0">
         <TextBlock HorizontalAlignment="Left" Margin="33,24,0,0" TextWrapping="Wrap" Text="Archivo." VerticalAlignment="Top"/>
         <TextBox x:Name="txtRutaArchivo" HorizontalAlignment="Left" Height="23" Margin="33,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
@@ -13,13 +13,18 @@
         <Button x:Name="btnReproducir" Content="Reproducir." HorizontalAlignment="Left" Margin="33,84,0,0" VerticalAlignment="Top" Width="75" Click="btnReproducir_Click"/>
         <Button x:Name="btnPausa" Content="Pausa." HorizontalAlignment="Left" Margin="131,84,0,0" VerticalAlignment="Top" Width="75" Click="btnPausa_Click" IsEnabled="False"/>
         <Button x:Name="btnDetener" Content="Detener." HorizontalAlignment="Left" Margin="226,84,0,0" VerticalAlignment="Top" Width="75" Click="btnDetener_Click"/>
-        <Slider x:Name="sldReproduccion" HorizontalAlignment="Left" Margin="33,118,0,0" VerticalAlignment="Top" Width="268" Thumb.DragStarted ="sdlReproduccion_DragStarted" Thumb.DragCompleted ="sdlReproduccion_DragCompleted"/>
+        <Slider x:Name="sldReproduccion" HorizontalAlignment="Left" Margin="33,118,0,0" VerticalAlignment="Top" Width="268" Thumb.DragStarted ="sdlReproduccion_DragStarted" Thumb.DragCompleted ="sdlReproduccion_DragCompleted" ValueChanged="sldReproduccion_ValueChanged"/>
         <TextBlock x:Name="lblTiempoActual" HorizontalAlignment="Left" Margin="33,153,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top"/>
         <TextBlock x:Name="lblTiempoFinal" HorizontalAlignment="Left" Margin="273,153,0,0" TextWrapping="Wrap" Text="00:00" VerticalAlignment="Top"/>
-        <Slider x:Name="sldVolumen" HorizontalAlignment="Left" Margin="437,24,0,0" VerticalAlignment="Top" Width="28" Orientation="Vertical" Height="139"/>
+        <Slider x:Name="sldVolumen" HorizontalAlignment="Left" Margin="444,24,0,0" VerticalAlignment="Top" Width="28" Orientation="Vertical" Height="139" Maximum="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="470,27,0,0" TextWrapping="Wrap" Text="Volumen." VerticalAlignment="Top"/>
         <TextBlock x:Name="lblPorcentajeVolumen" HorizontalAlignment="Left" Margin="470,147,0,0" TextWrapping="Wrap" Text="0%" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbSalida" HorizontalAlignment="Left" Margin="311,83,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbSalida_SelectionChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="27,179,0,0" TextWrapping="Wrap" Text="Duracion Fade In" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDuracionFadeIn" HorizontalAlignment="Left" Height="23" Margin="27,200,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="53"/>
+        <TextBlock HorizontalAlignment="Left" Margin="153,179,0,0" TextWrapping="Wrap" Text="Duracion Fade out" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtDuracionFadeOut" HorizontalAlignment="Left" Height="23" Margin="153,200,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="53"/>
+        <Button x:Name="btnFadeOut" Content="Iniciar FadeOut" HorizontalAlignment="Left" Margin="286,200,0,0" VerticalAlignment="Top" Width="101" Click="btnFadeOut_Click"/>
 
     </Grid>
 </Window>
